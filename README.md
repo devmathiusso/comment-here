@@ -1,4 +1,4 @@
-# MyMoney Project
+# CommentHere Project
 
 An application built with ReactJS, Firebase, and ContextAPI.
 
