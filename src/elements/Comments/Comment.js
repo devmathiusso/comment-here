@@ -1,16 +1,21 @@
-import React from "react";
+import React, { useContext } from "react";
 import ReactTimeAgo from "react-time-ago/tooltip";
+import { AuthContext } from "../../auth";
 
-const Comment = ({ comment }) => (
-  <div>
+const Comment = ({ comment }) => {
+  const auth = useContext(AuthContext);
+
+  return (
     <div>
-      <b>{comment.user.name}</b> -{" "}
-      <small>
-        <ReactTimeAgo date={comment.createdAt} />
-      </small>
+      <div>
+        <b>{comment.user.name}</b> -{" "}
+        <small>
+          <ReactTimeAgo date={comment.createdAt} />
+        </small>
+      </div>
+      <p>{comment.content}</p>
     </div>
-    <p>{comment.content}</p>
-  </div>
-);
+  );
+};
 
 export default Comment;
