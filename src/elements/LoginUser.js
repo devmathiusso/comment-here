@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 
 import { AuthContext } from "../auth";
 
-const CreateUser = () => {
+const LoginUser = () => {
   const auth = useContext(AuthContext);
   const [form, setForm] = useState({ email: "", password: "" });
 
@@ -18,9 +18,9 @@ const CreateUser = () => {
 
   return (
     <>
-      <h3>Create Account</h3>
-      {auth.createUser.createUserState.error && (
-        <p>{auth.createUser.createUserState.error}</p>
+      <h3>Sign In</h3>
+      {auth.loginUser.loginUserState.error && (
+        <p>{auth.loginUser.loginUserState.error}</p>
       )}
       <input
         type="email"
@@ -34,11 +34,11 @@ const CreateUser = () => {
         value={password}
         onChange={onChange("password")}
       />
-      <button onClick={() => auth.createUser.createUser(email, password)}>
-        Create User
+      <button onClick={() => auth.loginUser.loginUser(email, password)}>
+        Sign In
       </button>
     </>
   );
 };
 
-export default CreateUser;
+export default LoginUser;

@@ -1,10 +1,7 @@
-import React, { useContext } from "react";
+import React from "react";
 import ReactTimeAgo from "react-time-ago/tooltip";
-import { AuthContext } from "../../auth";
 
 const Comment = ({ comment }) => {
-  const auth = useContext(AuthContext);
-
   return (
     <div>
       <div>

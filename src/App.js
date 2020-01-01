@@ -4,6 +4,8 @@ import "./App.css";
 import NewComment from "./elements/NewComment";
 import Comments from "./elements/Comments";
 import CreateUser from "./elements/CreateUser";
+import LoginUser from "./elements/LoginUser";
+import UserInfo from "./elements/UserInfo";
 
 import { AuthProvider } from "./auth";
 
@@ -14,6 +16,8 @@ function App() {
         <NewComment />
         <Comments />
         <CreateUser />
+        <LoginUser />
+        <UserInfo />
       </div>
     </AuthProvider>
   );
