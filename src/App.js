@@ -1,24 +1,21 @@
 import React from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import "./App.css";
 
-import NewComment from "./elements/NewComment";
-import Comments from "./elements/Comments";
-import CreateUser from "./elements/CreateUser";
-import LoginUser from "./elements/LoginUser";
-import UserInfo from "./elements/UserInfo";
+import CreateUser from "./pages/CreateUser";
+import LoginUser from "./pages/LoginUser";
+import CommentsPage from "./pages/CommentsPage";
 
 import { AuthProvider } from "./auth";
 
 function App() {
   return (
     <AuthProvider>
-      <div>
-        <NewComment />
-        <Comments />
-        <CreateUser />
-        <LoginUser />
-        <UserInfo />
-      </div>
+      <Router>
+        <Route path="/register" exact component={CreateUser} />
+        <Route path="/login" exact component={LoginUser} />
+        <Route path="/comments" exact component={CommentsPage} />
+      </Router>
     </AuthProvider>
   );
 }

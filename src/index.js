@@ -1,8 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
+
+import "bootstrap/dist/css/bootstrap.min.css";
 
 import JavascriptTimeAgo from "javascript-time-ago";
 import en from "javascript-time-ago/locale/en";

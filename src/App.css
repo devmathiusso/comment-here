@@ -12,3 +12,11 @@
 .rrui__tooltip--before-hide {
   opacity: 0;
 }
+
+.form-sign {
+  width: 330px;
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+  text-align: center;
+}

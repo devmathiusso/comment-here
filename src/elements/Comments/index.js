@@ -14,7 +14,14 @@ const Comments = () => {
 
   if (!ids.length) return <p>Loading comments...</p>;
 
-  return ids.map(id => <Comment key={id} comment={data[id]} />);
+  return (
+    <>
+      <p className="text-secondary pb">Comments</p>
+      {ids.map(id => (
+        <Comment key={id} comment={data[id]} />
+      ))}
+    </>
+  );
 };
 
 export default Comments;
