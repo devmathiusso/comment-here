@@ -16,7 +16,7 @@ const Comments = () => {
 
   return (
     <>
-      <p className="text-secondary pb">Comments</p>
+      <p className="text-secondary pb">{ids.length} Comments</p>
       {ids.map(id => (
         <Comment key={id} comment={data[id]} />
       ))}

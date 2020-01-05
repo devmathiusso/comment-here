@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import logo from "../logo.svg";
 
-const getLinkTo = pageName => (pageName === "Sign in" ? "register" : "login");
+const getLinkTo = pageName => (pageName === "Sign in" ? "/register" : "/");
 
 const getLinkText = pageName =>
   pageName === "Sign in"
@@ -28,7 +28,7 @@ const AuthPage = ({ children, pageName, buttonOnClick, errorMsg }) => (
 
     <div className="mt-2 mb-2 text-secondary">OR</div>
 
-    <Link to={`/${getLinkTo(pageName)}`}>{getLinkText(pageName)}</Link>
+    <Link to={getLinkTo(pageName)}>{getLinkText(pageName)}</Link>
   </div>
 );
 

@@ -1,4 +1,5 @@
 import React, { useContext, useState } from "react";
+import { Redirect } from "react-router-dom";
 
 import { AuthContext } from "../auth";
 import AuthPage from "../elements/AuthPage";
@@ -13,7 +14,7 @@ const LoginUser = () => {
   };
 
   if (auth.user !== null) {
-    return null;
+    return <Redirect to="/comments" />;
   }
 
   const { email, password } = form;

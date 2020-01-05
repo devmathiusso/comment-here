@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Redirect, Link } from "react-router-dom";
 
 import { AuthContext } from "../auth";
 import logo from "../logo.svg";
@@ -8,19 +8,17 @@ const UserInfo = () => {
   const auth = useContext(AuthContext);
 
   if (auth.user === null) {
-    return null;
+    return <Redirect to="/" />;
   }
 
-  const { email, displayName } = auth.user;
-  const [alternativeDisplayName] = email.split("@");
-  const dn = displayName || alternativeDisplayName;
+  const { email } = auth.user;
 
   return (
     <ul
       className="navbar-nav ml-auto d-flex justify-content-center align-items-center"
       style={{ flexDirection: "row" }}
     >
-      <li className="nav-item">{dn}</li>
+      <li className="nav-item">{email}</li>
       <li className="nav-item ml-2">
         <button
           type="button"

@@ -12,8 +12,8 @@ function App() {
   return (
     <AuthProvider>
       <Router>
+        <Route path="/" exact component={LoginUser} />
         <Route path="/register" exact component={CreateUser} />
-        <Route path="/login" exact component={LoginUser} />
         <Route path="/comments" exact component={CommentsPage} />
       </Router>
     </AuthProvider>

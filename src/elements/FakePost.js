@@ -3,7 +3,7 @@ import gitHubLogo from "../github-logo.png";
 
 const FakePost = () => (
   <>
-    <div className="mt-3 mb-3 text-justify">
+    <div className="mt-3 mb-3 text-justify" style={{ wordBreak: "break-word" }}>
       <h1>What I've learned building this app</h1>
       <h2 className="text-secondary h4 mb-3">Leave your comment down below</h2>
 
@@ -15,8 +15,8 @@ const FakePost = () => (
       </p>
 
       <p>
-        In this application, I've learned a little bit about the following
-        things:
+        This is a very simple application, by the way, I've learned a little bit
+        about the following things:
       </p>
 
       <ul>
@@ -65,7 +65,11 @@ const FakePost = () => (
       <p>Thanks a lot!</p>
 
       <p>
-        <a href="https://github.com/devmathiusso/comment-here" target="_blank">
+        <a
+          href="https://github.com/devmathiusso/comment-here"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <img
             src={gitHubLogo}
             className="mr-2"

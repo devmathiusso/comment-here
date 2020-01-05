@@ -9,12 +9,12 @@ import UserInfo from "../elements/UserInfo";
 const CommentsPage = () => (
   <>
     <Header />
-    <div style={{ margin: "0 auto", width: 740 }}>
+    <div className="col-sm-12 col-md-8 col-lg-8 m-auto">
       <div className="container">
         <FakePost />
+        <UserInfo />
         <NewComment />
         <Comments />
-        <UserInfo />
       </div>
     </div>
   </>

@@ -1,4 +1,5 @@
 import React, { useContext, useState } from "react";
+import { Redirect } from "react-router-dom";
 
 import { AuthContext } from "../auth";
 import AuthPage from "../elements/AuthPage";
@@ -17,10 +18,10 @@ const CreateUser = () => {
   };
 
   if (auth.user !== null) {
-    return null;
+    return <Redirect to="/comments" />;
   }
 
-  const { displayName, email, password } = form;
+  const { email, password } = form;
 
   return (
     <AuthPage
@@ -28,14 +29,6 @@ const CreateUser = () => {
       buttonOnClick={() => auth.createUser.createUser(email, password)}
       errorMsg={auth.createUser.createUserState.error}
     >
-      <DefaultInput
-        type="text"
-        id="displayName"
-        label="Display Name"
-        value={displayName}
-        onChange={onChange("displayName")}
-      />
-
       <DefaultInput
         type="email"
         id="email"
